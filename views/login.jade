@@ -1,8 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  form(action="/login", method="POST")
-    input(type="text", placeholder="Username", name="username")
-    input(type="password", placeholder="Password", name="password")
-    input(type="submit", value="Login")
+  if !user
+    .header
+      .row
+        h1= title
+    .message
+      .row
+        h3 Login
+        form(action="/login", method="POST")
+          input(type="text", placeholder="Username", name="username")
+          input(type="password", placeholder="Password", name="password")
+          input.btn(type="submit", value="Login")
+  else
+    h2 Hello #{user.username}!
+    a.btn(href="/logout") Sign out!

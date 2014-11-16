@@ -7,8 +7,9 @@ exports.login = function(req, cb) {
   })
   if (!user) return cb(new Error('No user found.'), user)
 
-  delete user.password
-  req.session.user = user
+  req.session.user = {}
+  req.session.user.username = user.username
+  req.session.user.group = user.group
   cb(false, user)
 }
 

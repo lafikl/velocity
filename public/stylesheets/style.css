@@ -1,8 +1,54 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 40px;
+  margin: 0;
+  font: 16px Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  margin: -40px;
+  margin-bottom: 40px;
+  padding: 40px;
+
+  background: #004F8D;
+  color: #fff;
+}
+.row {
+  width: 660px;
+  margin: 0 auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.btn {
+  position: relative;
+  margin-top: 15px;
+  padding: 7px 20px;
+
+  background: #f9f9f9;
+  border: 1px solid #dedede;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f1f1f1;
+}
+
+.btn:active {
+  bottom: -1px;
+}
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
 }
