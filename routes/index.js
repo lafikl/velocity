@@ -4,13 +4,13 @@ var router = express.Router()
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', {
-    title: 'Velocity - PerfBar',
+    title: 'Velocity - PerfBar Demo',
     user: req.session.user
   })
 })
 
 router.get('/login', function(req, res) {
-  res.render('login', { title: 'Velocity - PerfBar' })
+  res.render('login', { title: 'Velocity - PerfBar Demo' })
 })
 
 router.post('/login', function(req, res) {
